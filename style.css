@@ -1,0 +1,143 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* You can choose another font if preferred */
+}
+
+body {
+    background-color: #fce4ec; /* Light baby pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* To-Do Container */
+.todo-container {
+    background-color: #f8bbd0; /* Soft pink for the container */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #c2185b; /* Darker pink for the header */
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: lowercase; /* Makes the text lowercase */
+}
+
+/* Input Field and Button */
+#todo-input {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #e91e63; /* Pink border for the input */
+    border-radius: 30px;
+    outline: none;
+    margin-right: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+    border-color: #d5006d; /* Focused input border color */
+}
+
+.add-btn {
+    background-color: #d5006d; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #c51162; /* Darker pink on hover */
+}
+
+/* Task List Styles */
+#todo-list {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: #fff; /* White background for tasks */
+    color: #c51162; /* Dark pink for task text */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+#todo-list li:hover {
+    transform: translateY(-5px);
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+}
+
+.task-info input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: 10px;
+}
+
+.delete-btn {
+    background-color: #ff6666; /* Delete button color */
+    border: none;
+    padding: 7px 12px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff3333; /* Darker red on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .todo-container {
+        width: 90%;
+    }
+
+    #todo-input {
+        width: 60%;
+    }
+}
